@@ -1,0 +1,9 @@
+sudo: required # required root permission
+services: #required dependencies
+  - docker
+
+before_install:
+  - docker build -t razmjo/frontend -f Dockerfile.dev .
+
+script:
+  - docker run razmjo/frontend npm run test -- --coverage

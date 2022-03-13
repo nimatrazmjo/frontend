@@ -6,7 +6,7 @@ before_install:
   - docker build -t razmjo/frontend -f Dockerfile.dev .
 
 script:
-  - docker run razmjo/frontend npm run test --coverage
+  - docker run -e CI=true razmjo/frontend npm run test
 
 deploy:
   provider: elasticbeanstalk

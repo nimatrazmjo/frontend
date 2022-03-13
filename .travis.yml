@@ -12,7 +12,7 @@ script:
 deploy:
   provider: elasticbeanstalk
   skip_cleanup: true
-  region: 'us-east-1'
+  region: 'ap-south-1'
   app: 'jobsaf-test'
   env: 'Jobsaftest-env'
   bucket_name: 'elasticbeanstalk-ap-south-1-843594982021'

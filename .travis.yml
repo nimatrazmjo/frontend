@@ -1,3 +1,4 @@
+language: generic
 sudo: required # required root permission
 services: #required dependencies
   - docker
@@ -10,12 +11,12 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "ap-south-1"
-  app: "docker"
   skip_cleanup: true
-  env: "Docker-env"
-  bucket_name: "elasticbeanstalk-ap-south-1-843594982021"
-  bucket_path: "docker"
+  region: 'us-east-1'
+  app: 'jobsaf-test'
+  env: 'Jobsaftest-env'
+  bucket_name: 'elasticbeanstalk-ap-south-1-843594982021'
+  bucket_path: 'jobsaf-test'
   on:
     branch: main
   access_key_id: $AWS_ACCESS_KEY
